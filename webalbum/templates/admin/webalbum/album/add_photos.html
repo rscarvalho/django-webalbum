@@ -1,0 +1,49 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_modify adminmedia %}
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+     <a href="../../../">{% trans "Home" %}</a> &rsaquo;
+     <a href="../../">{{ app_label|capfirst|escape }}</a> &rsaquo;
+     <a href="../">{{ opts.verbose_name_plural|capfirst }}</a> &rsaquo;
+     {% trans "Add photos" %}
+</div>
+{% endblock %}
+{% block stylesheet %}{% admin_media_prefix %}css/forms.css{% endblock %}
+{% block coltype %}colM{% endblock %}
+{% block bodyclass %}change-form{% endblock %}
+
+{% block content %}
+<div id="content-main">
+  <form action="" method="post" enctype="multipart/form-data">
+    <div>
+        {% if form.errors %}
+        <p class="errornote">
+        {% blocktrans count form.errors|length as counter %}Please correct the error below.{% plural %}Pleas\
+e correct the errors below.{% endblocktrans %}
+        </p>
+        <ul class="errorlist">
+            {% for error in form.non_field_errors %}
+            <li>{{error}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <fieldset class="module aligned">
+            {% for field in form %}
+            <div class="form-row{% if field.errors %} errors{% endif %}">
+                {{ field.errors }}
+                <div>
+                    <label class="required">{{field.label}}: </label>{{ field }}
+                    {% if field.field.help_text %}<p class="help">{{field.field.help_text}}</p>{% endif %}
+                </div>
+                
+            </div>
+            {% endfor %}
+        </fieldset>
+        <div class="submit-row">
+            <input type="submit" class="default" value="{% trans "Add photos" %}"/>
+            <input type="button" value="{% trans "Cancel" %}" onclick="location = '../'"/>
+        </div>
+    </div>
+  </form>
+</div>
+{% endblock %}
