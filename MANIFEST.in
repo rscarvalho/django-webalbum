@@ -1,0 +1,6 @@
+include README
+include COPYING
+include MANIFEST.in
+include webalbum/*.py
+include webalbum/locale/pt_BR/LC_MESSAGES/django.po
+include webalbum/locale/pt_BR/LC_MESSAGES/django.mo
