@@ -1,1 +1,10 @@
-Readme File.
+===========
+README FILE
+===========
+
+++++++++++++
+Introduction
+++++++++++++
+
+django-webalbum offers a simple way to manage picture albums, providing a configurable environment, 
+intended to provide a full-featured web album component for your django application
