@@ -2,7 +2,7 @@ h2. README FILE
 
 h3. Introduction
 
-django-we@balbum offers a simple way to manage picture albums, providing a configurable environment, 
+@django-webalbum@ offers a simple way to manage picture albums, providing a configurable environment, 
 intended to provide a full-featured web album component for your django applications.
 
 
