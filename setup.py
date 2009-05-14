@@ -21,10 +21,11 @@ setup(name="django-webalbum",
       author="Rodolfo da Silva Carvalho",
       author_email="rodolfo@rcarvalho.eti.br",
       url="http://github.com/rcarvalho/django-webalbum/",
-      packages=["webalbum"],
+      packages=["webalbum", "webalbum.templatetags", "webalbum.feeds"],
       package_data={"webalbum": [
             "locale/pt_BR/LC_MESSAGES/django.po",
-            "locale/pt_BR/LC_MESSAGES/django.mo"
+            "locale/pt_BR/LC_MESSAGES/django.mo",
+            "templates/admin/webalbum/album/*.html"
             ]},
 )
 
