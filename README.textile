@@ -1,0 +1,53 @@
+h2. README FILE
+
+h3. Introduction
+
+django-we@balbum offers a simple way to manage picture albums, providing a configurable environment, 
+intended to provide a full-featured web album component for your django applications.
+
+
+h3. Installation
+
+The installation process is very simple. Just run @python setup.py install@ in the terminal, or put the django-webalbum source
+folder into your @PYTHONPATH@ environment variable.
+
+
+h3. Configuration
+
+There are some configuration variables you can use to customize the behavior of your application.
+
+|_. Variable Name |_. Meaning |_. Acceptable values |_. Default Value |
+| @ALBUM_DEFAULT_EXTENSION@ | Default Extension for images | any file extension | "jpg" |
+| @ALBUM_IMAGE_SIZE@ | A tuple containing the album image sizes (width, height) | a tuple of integers | (480, 320) |
+| @ALBUM_ALBUM_THUMBNAIL_SIZE@ | A tuple containin the album thumbnail size for album cover | a tuple of integers | (180, 124) |
+| @ALBUM_PHOTO_THUMBNAIL_SIZE@ | A tuple containing the album thumbnail size for album images | a tuple of integers | (80, 80) |
+| @ALBUM_COVER_SIZE@ | Size of album's cover image | a tuple of integers | (150, 150)) |
+| @ALBUM_COVER_THUMB_SIZE@ | A tuple containing the album's cover thumbnail size (if any) | a tuple of integers, or None | @None@ |
+| @ALBUM_OVER_COVER@ | The path for an image that will be pasted over the cover image | a path relative to MEDIA_ROOT | @None@ |
+| @ALBUM_PUT_WATERMARK@ | Set to True if you want to use a watermark on the image | @True@/@False@ | @False@ |
+| @ALBUM_WATERMARK@ | The path for the watermark file | a valid absolute path to the file | @MEDIA_ROOT@ + "images/watermark.png" |
+| @ALBUM_WATERMARK_POSITION@ | The position of the watermark, relative to the image | bottomleft, center bottomright, topleft, topright | "bottomleft" |
+| @ALBUM_WATERMARK_ALPHA@ | *NOT IMPLEMENTED* | *NOT IMPLEMENTED* | 0.7 |
+| @ALBUM_CROP_ORIENTATION@ | *NOT IMPLEMENTED* | *NOT IMPLEMENTED* | "center" |
+| @ALBUM_ALBUMS_PER_PAGE@ | The amount of albums per page | any integer | 8 |
+| @ALBUM_PHOTOS_PER_PAGE@ | The amount of photos per page | any integer | 9 |
+| @ALBUM_PORTRAIT_SIZE@ | Set to true if photos can be in portrait orientation | @True@/@False@ | @False@ |
+| @ALBUM_HAS_HIGHLIGHT@ | Set to True if your albums have highlight pictures | @True@/@False@ | @False@ |
+| @ALBUM_HIGHLIGHT_SIZE@ | A tuple indicating the album's higlight size (if any) | a tuple of | (156, 314) |
+| @ALBUM_HIGHLIGHT_THUMB_SIZE@ | A tuple indicating the album highlight's thumbnail size (if any)| a tuple of integers | (240, 256) |
+| @ALBUM_HIGHLIGHT_WATERMARK@ | The path for a watermark to put on the higlight picture (if any)| a valid path, relative to @MEDIA_ROOT@ | @None@ |
+| @ALBUM_HIGHLIGHT_WATERMARK_POSITION@ | *NOT IMPLEMENTED* | *NOT IMPLEMENTED* | "bottomleft" |
+| @ALBUM_HAS_PHOTOGRAPHER@ | Set to True if you want to include a photographer for your albums | @True@/@False@ | @False@ |
+| @ALBUM_PAGE_NEXT@ | A text for representing "Next page" element in album list | any string (HTMLs are OK) | "&raquo;" |
+| @ALBUM_PAGE_PREV@ | A text for representing "Prev page" element in album list | any string (HTMLs are OK) | "&laquo;" |
+| @ALBUM_PAGE_NO_NEXT@ | A text to render if there is no next page in album list. | any string (HTMLs are OK) | "" |
+| @ALBUM_PAGE_NO_PREV@ | A text to render if there is no previous page in album list. | any string (HTMLs are OK) | "" |
+| @ALBUM_PICTURE_PAGE_NEXT@ | A text for representing "Next page" element in photo list| any string (HTMLs are OK) | "&raquo;" |
+| @ALBUM_PICTURE_PAGE_PREV@ | A text for representing "Prev page" element in photo list | any string (HTMLs are OK)| "&laquo;" |
+
+
+h3. Contact
+
+You can contact me by e-mail:
+
+Rodolfo Carvalho: rodolfo __at__ rcarvalho __dot__ eti __dot__ br
